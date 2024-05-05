@@ -1,0 +1,131 @@
+
+body {
+    font-family: 'Roboto', sans-serif; /* Modern and clean font */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5; /* Soft grey background */
+}
+body {
+    background: linear-gradient(to bottom, #222, #333); /* Adjust shades as needed */
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('placeholder-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #38a9e3; /* Vibrant blue */
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #207ab8; /* Slightly darker blue on hover */
+}
+
+/* About, Feature and Contact Styles */
+#about, #features, #call-to-action {
+    padding: 60px 0;
+}
+
+.about-text p {
+    line-height: 1.6; /* Slightly increased line height for readability */
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    border-radius: 5px;
+}
+
+.icon-user-centered { /* Example - Use suitable icons */
+    font-size: 40px;
+    color: #38a9e3;
+    margin-bottom: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* About Section - Image and Text Layout */ 
+#about .image-placeholder {
+    width: 35%; /* Placeholder size */
+    float: left; /* Float image to the left */
+    margin-right: 30px; 
+    border-radius: 50%;  /* Circular image */
+}
+
+#about .about-text {
+    overflow: hidden; /* Clear floats */
+}
+
+/* Contact Section - Styling Email */
+.contact-email {
+    color: #38a9e3; 
+    font-size: 1.1em; /* Slightly larger */
+    text-decoration: none;
+}
+
+.contact-email:hover {
+    text-decoration: underline; 
+}
+
+/* Fade-in Animation Setup */
+section {
+    opacity: 0;   /* Initially hide all sections */
+    transition: opacity 1s ease-in-out; 
+}
+
+section.is-visible {
+    opacity: 1;  /* Show sections marked 'is-visible' */
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam - Your Web Design Expert</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="hero">
+        <div class="container">
+            <h1>Elevate Your Brand Presence with a Website Designed to Impress</h1>
+            <p>I'm Shivam, a passionate web designer crafting exceptional websites that convert.</p>
+            <a href="#contact" class="btn-primary">Let's Discuss Your Project</a>
+        </div>    
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <img src="my-profile-pic.jpg" alt="Shivam - Web Designer" class="image-placeholder">
+
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>Hello! I'm Shivam, a BCA graduate with a fervent passion for web design. I'm based in India and constantly honing my skills to push the boundaries of creativity.  I take immense pride in crafting websites that not only look phenomenal but also deliver a seamless user experience. I specialize in understanding your unique vision and translating it into stunning web design that resonates with your target audience.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <h2>What Makes My Designs Stand Out?</h2>
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <i class="icon-user-centered"></i>
+                        <h3>Unique and User-Centered</h3>
+                        <p>I prioritize understanding your brand and target audience to  design websites that resonate.</p>
+                    </div>
+                    <div class="feature-box">
+                        <i class="icon-pixel-perfect"></i> 
+                        <h3>Pixel-Perfect Design</h3>
+                        <p>I meticulously craft each element, ensuring flawless alignment, spacing, and a visually captivating aesthetic.</p>
+                    </div>
+                    <div class="feature-box">
+                        <i class="icon-responsive"></i> 
+                        <h3>Responsive Magic</h3>
+                        <p>Your website will adapt beautifully across all devices, desktops, tablets, and mobiles.</p>
+                    </div>
+                    <div class="feature-box">
+                        <i class="icon-micro-interactions"></i>
+                        <h3>Micro-Interaction Marvels</h3>
+                        <p>Subtle animations and hover effects will add a touch of delight and enhance user engagement.</p>
+                    </div>
+                    <div class="feature-box">
+                        <i class="icon-seo-friendly"></i>
+                        <h3>SEO Savvy</h3>
+                        <p>I prioritize search engine optimization best practices to boost your website's visibility.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="call-to-action">
+            <div class="container">
+                <h2>Ready to Craft Your Dream Website?</h2>
+                <p>Let's collaborate and turn your vision into a digital reality that drives results!</p>
+                <a href="#contact" class="btn-primary">Schedule a Free Consultation</a>
+            </div>
+        </section>
+
+        
+        <section id="contact">
+            <div class="container">
+                <h2>Let's Connect!</h2>
+                <p>Have a project in mind? Reach out to me via email:</p>
+                <a href="mailto:shivam@example.com" class="contact-email">shivam@example.com</a> 
+            </div>
+        </section>
+    </main>    
+
+    <footer>
+        <p>&copy; 2024 Shivam. All Rights Reserved.</p> 
+        </footer>
+    
+        <script>
+            const links = document.querySelectorAll('a[href^="#"]');
+    
+            for (const link of links) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault(); 
+    
+                    const href = this.getAttribute('href'); 
+                    const targetElement = document.querySelector(href);  
+    
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth' 
+                    });
+                });
+            }
+
+            // Fade In Effect 
+            const sections = document.querySelectorAll('section');
+            const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.intersectionRatio > 0) { 
+                entry.target.classList.add('is-visible');
+                } else {
+                entry.target.classList.remove('is-visible');
+                }
+            });
+            });
+
+            sections.forEach(section => {
+            observer.observe(section);
+            });
+        </script>
+</body>
+</html>
